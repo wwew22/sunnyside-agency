@@ -1034,10 +1034,12 @@ section-text-bottom > h1 {
         font-family: 'Barlow', sans-serif;
         font-weight: 400;
         color: hsl(212, 27%, 19%);
-        padding: 0 rem;
+        padding: 0rem;
         font-size: 1rem;
         line-height: 1.5rem;
         letter-spacing: .02cm;
+        margin: 0 auto;
+        width: 70%;
     }
 
     .forth-section {
