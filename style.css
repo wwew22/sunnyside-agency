@@ -310,6 +310,11 @@
     -webkit-appearance: button; /* 1 */
     font: inherit; /* 2 */
   }
+
+  input[type=text], input[type=button] {
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
+    }
   
   /* Interactive
      ========================================================================== */
@@ -465,6 +470,9 @@ ul {
     display: flex;
     justify-content: center;
     align-items: flex-start;
+    animation: arrowUpDown;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
 }
 
 .logo {
@@ -496,6 +504,8 @@ ul {
     margin: 1em;
     font-weight: 400;
     transition: 200ms all;
+    text-decoration: none;
+    color: var(--white);
 }
 
 .navLink:hover {
@@ -593,11 +603,12 @@ section-text-bottom > h1 {
 }
 
 .sectionBtn {
-  background-color: var(--white);
+    background-color: var(--white);
     cursor: pointer;
     font-family: 'Fraunces', serif;
     font-weight: 800;
     text-transform: uppercase;
+    text-decoration: none;
     border: 0;
     transition: 200ms all;
 }
@@ -849,8 +860,7 @@ section-text-bottom > h1 {
   top: 60px;
   width: 300px;
   height: 0;
-  background-color: rgba(255,255,255,0.5);
-  backdrop-filter: blur(20px);
+  background-color: var(--yellow);
   border-radius: .3rem;
   overflow: hidden;
   transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -878,13 +888,20 @@ section-text-bottom > h1 {
 
 .dropdown_menu li:hover {
   border-radius: .3rem;
-  background-color: rgba(255,255,255,0.12);
-  backdrop-filter: blur(20px);
+  background-color: var(--white);
   padding: 1rem;
   margin-right: 2.5rem;
   cursor: pointer;
   align-items: center;
   justify-content: center;
+}
+
+
+
+@keyframes arrowUpDown {
+  0% {margin-top: initial;}
+  50% {margin-top: 3rem;}
+  100% {margin-top: initial;}
 }
 
 
